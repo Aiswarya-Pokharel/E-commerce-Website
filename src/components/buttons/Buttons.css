@@ -1,0 +1,121 @@
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.welcome-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn.danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.profile-btn {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn.primary {
+
+  padding: 0.6rem 0.8rem;
+  border: none;
+  background: #4e89ae;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.btn.primary:hover {
+  background: #3a6e90;
+}
+
+.btn.explore-btn {
+  cursor: pointer;
+  transition: background 0.3s ease;
+  padding: 10px 26px;
+  border: 2px solid transparent;
+  color: #3b141c;
+  border-radius: 30px;
+  background-color: #f3961c;
+  font-weight: 500;
+}
+
+.btn.explore-btn:hover {
+  color: white;
+  border-color: white;
+  background: transparent;
+}
+
+.cart {
+  width: 40px;
+  height: 40px;
+  background-color: #e8f6ea;
+  color: black;
+  font-weight: 500;
+  border-radius: 50%;
+  border: 1px solid #cce7d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.cart:hover,
+.buy-now:hover {
+  transform: scale(1.1);
+  background-color: #d0ebd8;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cart.in-cart {
+  color: #088178;
+}
+
+.btn.buy-now {
+  background: #088178;
+  color: white;
+  text-align: center;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+
+.send-msg {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #088178;
+  color: #3b141c;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.send-msg:hover {
+  background: #088178;
+}

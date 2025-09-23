@@ -1,0 +1,89 @@
+.contact-form-container {
+  background: linear-gradient(135deg, #fdfdfd, #e3e6f3);
+  color: #333;
+  padding: 40px 30px;
+  border-radius: 16px;
+  max-width: 550px;
+  margin: 120px auto 60px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.contact-form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.contact-form-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #3b141c;
+  position: relative;
+}
+
+.contact-form-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f3961c;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 1px solid #f3961c;
+  box-shadow: 0 0 6px rgba(243, 150, 28, 0.4);
+}
+
+textarea {
+  resize: none;
+}
+
+
+.send-msg {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #f3961c, #ff6b6b);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+}
+
+.send-msg:hover {
+  background: linear-gradient(45deg, #ff6b6b, #f3961c);
+  transform: scale(1.03);
+}

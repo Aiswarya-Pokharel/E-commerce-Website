@@ -1,0 +1,104 @@
+/* Cart Page Container */
+.cart-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading */
+.cart-page h2 {
+  font-size: 2rem;
+  color: #3b141c;
+  /* accent color */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Individual Cart Items */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+/* Product Image */
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+/* Product Details */
+.cart-item h5 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #252525;
+}
+
+.cart-item p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.2rem 0 0 0;
+}
+
+/* Remove Button */
+.cart-item button {
+  background-color: #f3961c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cart-item button:hover {
+  background-color: #e07b1f;
+  transform: scale(1.05);
+}
+
+/* Total Section (optional) */
+.cart-total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3b141c;
+}
+
+/* Empty Cart Message */
+.cart-page p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    margin-bottom: 0.5rem;
+  }
+
+  .cart-item button {
+    margin-top: 0.5rem;
+  }
+}

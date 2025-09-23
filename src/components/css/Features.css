@@ -1,0 +1,109 @@
+#features {
+  padding: 30px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#features h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #088178;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+#features h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #088178;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+#features p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+
+#features .pro-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  padding: 40px;
+  text-align: center;
+}
+
+#features .pro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  border: 1px solid #cce7d0;
+  border-radius: 20px;
+  padding: 10px 12px;
+  cursor: pointer;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#features .pro:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+#features .pro img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 220px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+
+#features .pro .des {
+  text-align: center;
+  flex-grow: 1;
+}
+
+#features .pro .des span {
+  color: #060606;
+}
+
+#features .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+
+#features .pro .row-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+
+}
+
+.star i {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star i.selected {
+  color: gold;
+}
+
+.star i.unselected {
+  color: lightgray;
+}

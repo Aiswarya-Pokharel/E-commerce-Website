@@ -1,7 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "../css/Features.css";
-
-import { CartContext } from "../Cart/CartContext";
 import { useNavigate } from "react-router-dom";
 import Buttons from "../buttons/Buttons";
 import { productsData } from "../products/ClothesData";
@@ -11,11 +9,6 @@ export default function Features() {
     productsData.map((p) => ({ ...p, rating: 0 }))
   );
   const navigate = useNavigate();
-  const { cart, addToCart } = useContext(CartContext);
-
-  const isInCart = (product) => {
-    return cart.some((item) => item.id === product.id);
-  };
   const handleRate = (id, rating) => {
     setProducts((prev) =>
       prev.map((p) => (p.id === id ? { ...p, rating } : p))
@@ -29,7 +22,15 @@ export default function Features() {
       <div className="pro-container">
         {products.map((product) => (
           <div className="pro" key={product.id}>
-            <img src={product.image} alt={product.name} />
+            <img
+              src={product.image}
+              alt={product.name}
+              style={{ cursor: "pointer" }}
+              onClick={() =>
+                navigate(`/product/${product.id}`, { state: { product } })
+              }
+            />
+
             <div className="des">
               <span>{product.brand}</span>
               <h5>{product.name}</h5>
@@ -55,24 +56,12 @@ export default function Features() {
 
             <div className="row-line">
               <Buttons
-                text="Buy Now"
-                styleClass="buy-now"
+                text="View Details"
+                styleClass="view-details"
                 type="button"
                 onClick={() =>
-                  navigate("/payment", {
-                    state: { totalAmount: product.price },
-                  })
+                  navigate(`/product/${product.id}`, { state: { product } })
                 }
-              />
-
-              <Buttons
-                icon="fa-solid fa-cart-shopping"
-                styleClass={`cart ${isInCart(product) ? "in-cart" : ""}`}
-                type="button"
-                onClick={() => {
-                  alert("Added to cart");
-                  addToCart(product);
-                }}
               />
             </div>
           </div>

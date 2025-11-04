@@ -1,0 +1,22 @@
+.copyright {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  padding: 0.5rem 2rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.copyright p {
+  margin: 0;
+
+}
+
+
+@media (max-width: 600px) {
+  .copyright {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+}

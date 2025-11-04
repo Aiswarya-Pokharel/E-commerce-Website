@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Register from "./components/Register";
 import Main from "./components/Home/Main";
@@ -14,14 +14,17 @@ import Failure from "./components/payment/Failure";
 import ContactUs from "./components/About/ContactUs";
 import Categories from "./components/Home/Categories";
 import MainLayout from "./components/Home/MainLayout";
+import ProductDetails from "./components/Home/ProductDetails";
 
 function App() {
   return (
     <CartProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
+          {/* Home */}
           <Route path="/" element={<HomePage />} />
 
+          {/* Explore */}
           <Route
             path="/explore"
             element={
@@ -30,23 +33,12 @@ function App() {
               </MainLayout>
             }
           />
-          <Route
-            path="/register"
-            element={
-              <MainLayout>
-                <Register type="signup" />
-              </MainLayout>
-            }
-          />
-          <Route
-            path="/login"
-            element={
-              <MainLayout>
-                <Register type="login" />
-              </MainLayout>
-            }
-          />
 
+          {/* Register / Login */}
+          <Route path="/register" element={<Register type="signup" />} />
+          <Route path="/login" element={<Register type="login" />} />
+
+          {/* Features */}
           <Route
             path="/features"
             element={
@@ -55,8 +47,11 @@ function App() {
               </MainLayout>
             }
           />
+
+          {/* Cart */}
           <Route path="/cart" element={<Cart />} />
 
+          {/* About / Contact / Terms */}
           <Route
             path="/about"
             element={
@@ -74,6 +69,8 @@ function App() {
               </MainLayout>
             }
           />
+
+          {/* Payment */}
           <Route
             path="/payment"
             element={
@@ -98,6 +95,8 @@ function App() {
               </MainLayout>
             }
           />
+
+          {/* Categories */}
           <Route
             path="/explore-items"
             element={
@@ -106,8 +105,11 @@ function App() {
               </MainLayout>
             }
           />
+
+          {/* ProductDetails */}
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </CartProvider>
   );
 }

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/E-commerce-Website/static/css/main.16bd1374.css",
+    "main.js": "/E-commerce-Website/static/js/main.cd116f4c.js",
+    "static/media/bg.jpg": "/E-commerce-Website/static/media/bg.5c2ab56cfe9ca406e861.jpg",
+    "static/media/kurtha.jpg": "/E-commerce-Website/static/media/kurtha.e2f2743a76b1f2a5f03b.jpg",
+    "static/media/pant.jpg": "/E-commerce-Website/static/media/pant.2c4cab12bfc674c70b6e.jpg",
+    "static/media/shirt.jpg": "/E-commerce-Website/static/media/shirt.e7d7506d986bc63ec4c9.jpg",
+    "static/media/bag2.jpg": "/E-commerce-Website/static/media/bag2.3aa36ec3dbba7e8bc84d.jpg",
+    "static/media/kurtha1.jpg": "/E-commerce-Website/static/media/kurtha1.db539c4de96a8e21914c.jpg",
+    "static/media/jacket.jpg": "/E-commerce-Website/static/media/jacket.0324e7a607580f1a9070.jpg",
+    "static/media/socks.jpg": "/E-commerce-Website/static/media/socks.17be8c00a7e8bc1c6fe5.jpg",
+    "static/media/main_pic.png": "/E-commerce-Website/static/media/main_pic.24aa18a2750c97a7d4b1.png",
+    "static/media/logo.png": "/E-commerce-Website/static/media/logo.7a053796c350f641e738.png",
+    "static/media/sari.jpg": "/E-commerce-Website/static/media/sari.cb2fdf2470c48dad0f81.jpg",
+    "index.html": "/E-commerce-Website/index.html",
+    "main.16bd1374.css.map": "/E-commerce-Website/static/css/main.16bd1374.css.map",
+    "main.cd116f4c.js.map": "/E-commerce-Website/static/js/main.cd116f4c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.16bd1374.css",
+    "static/js/main.cd116f4c.js"
+  ]
+}

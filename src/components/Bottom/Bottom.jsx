@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/HomePage.css";
+import "./Bottom.css";
 export default function Bottom() {
   return (
     <footer className="copyright">

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "../css/Contact.css";
+import { useNavigate } from "react-router-dom";
 import Buttons from "../buttons/Buttons";
 
 export default function ContactUs() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -15,8 +17,16 @@ export default function ContactUs() {
     setForm({ name: "", email: "", message: "" });
   };
 
+  const handleClose = () => {
+    navigate("/explore");
+  };
+
   return (
     <div className="contact-form-container">
+      <button className="cross-btn" onClick={handleClose}>
+        &times;
+      </button>
+
       <h2>Send Us a Message</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

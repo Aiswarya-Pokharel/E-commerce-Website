@@ -8,6 +8,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   font-family: "Poppins", sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 
@@ -22,6 +23,28 @@
   margin-bottom: 25px;
   color: #3b141c;
   position: relative;
+}
+
+
+.cross-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #eee;
+  border: none;
+  font-size: 1.5rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 1;
+  text-align: center;
+  transition: background 0.2s;
+  z-index: 10;
+}
+
+.cross-btn:hover {
+  background: #ddd;
 }
 
 .contact-form-container h2::after {

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/E-commerce-Website/static/css/main.16bd1374.css",
-    "main.js": "/E-commerce-Website/static/js/main.cd116f4c.js",
+    "main.css": "/E-commerce-Website/static/css/main.466d41ce.css",
+    "main.js": "/E-commerce-Website/static/js/main.cd8a75e2.js",
     "static/media/bg.jpg": "/E-commerce-Website/static/media/bg.5c2ab56cfe9ca406e861.jpg",
     "static/media/kurtha.jpg": "/E-commerce-Website/static/media/kurtha.e2f2743a76b1f2a5f03b.jpg",
     "static/media/pant.jpg": "/E-commerce-Website/static/media/pant.2c4cab12bfc674c70b6e.jpg",
@@ -14,11 +14,11 @@
     "static/media/logo.png": "/E-commerce-Website/static/media/logo.7a053796c350f641e738.png",
     "static/media/sari.jpg": "/E-commerce-Website/static/media/sari.cb2fdf2470c48dad0f81.jpg",
     "index.html": "/E-commerce-Website/index.html",
-    "main.16bd1374.css.map": "/E-commerce-Website/static/css/main.16bd1374.css.map",
-    "main.cd116f4c.js.map": "/E-commerce-Website/static/js/main.cd116f4c.js.map"
+    "main.466d41ce.css.map": "/E-commerce-Website/static/css/main.466d41ce.css.map",
+    "main.cd8a75e2.js.map": "/E-commerce-Website/static/js/main.cd8a75e2.js.map"
   },
   "entrypoints": [
-    "static/css/main.16bd1374.css",
-    "static/js/main.cd116f4c.js"
+    "static/css/main.466d41ce.css",
+    "static/js/main.cd8a75e2.js"
   ]
 }

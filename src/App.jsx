@@ -15,102 +15,104 @@ import ContactUs from "./components/About/ContactUs";
 import Categories from "./components/Home/Categories";
 import MainLayout from "./components/Home/MainLayout";
 import ProductDetails from "./components/Home/ProductDetails";
+import { AuthProvider } from "./components/Home/AuthContext";
 
 function App() {
   return (
-    <CartProvider>
-      <HashRouter>
-        <Routes>
-          {/* Home */}
-          <Route path="/" element={<HomePage />} />
+    <AuthProvider>
+      <CartProvider>
+        <HashRouter>
+          <Routes>
+            {/* Home */}
+            <Route path="/" element={<HomePage />} />
 
-          {/* Explore */}
-          <Route
-            path="/explore"
-            element={
-              <MainLayout>
-                <Main />
-              </MainLayout>
-            }
-          />
+            {/* Explore */}
+            <Route
+              path="/explore"
+              element={
+                <MainLayout>
+                  <Main />
+                </MainLayout>
+              }
+            />
 
-          {/* Register / Login */}
-          <Route path="/register" element={<Register type="signup" />} />
-          <Route path="/login" element={<Register type="login" />} />
+            {/* Register / Login */}
+            <Route path="/register" element={<Register />} />
 
-          {/* Features */}
-          <Route
-            path="/features"
-            element={
-              <MainLayout>
-                <Features />
-              </MainLayout>
-            }
-          />
+            {/* Features */}
+            <Route
+              path="/features"
+              element={
+                <MainLayout>
+                  <Features />
+                </MainLayout>
+              }
+            />
 
-          {/* Cart */}
-          <Route path="/cart" element={<Cart />} />
+            {/* Cart */}
+            <Route path="/cart" element={<Cart />} />
 
-          {/* About / Contact / Terms */}
-          <Route
-            path="/about"
-            element={
-              <MainLayout>
-                <About />
-              </MainLayout>
-            }
-          />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route
-            path="/terms"
-            element={
-              <MainLayout>
-                <Terms />
-              </MainLayout>
-            }
-          />
+            {/* About / Contact / Terms */}
+            <Route
+              path="/about"
+              element={
+                <MainLayout>
+                  <About />
+                </MainLayout>
+              }
+            />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route
+              path="/terms"
+              element={
+                <MainLayout>
+                  <Terms />
+                </MainLayout>
+              }
+            />
 
-          {/* Payment */}
-          <Route
-            path="/payment"
-            element={
-              <MainLayout>
-                <Payment />
-              </MainLayout>
-            }
-          />
-          <Route
-            path="/success"
-            element={
-              <MainLayout>
-                <Success />
-              </MainLayout>
-            }
-          />
-          <Route
-            path="/failure"
-            element={
-              <MainLayout>
-                <Failure />
-              </MainLayout>
-            }
-          />
+            {/* Payment */}
+            <Route
+              path="/payment"
+              element={
+                <MainLayout>
+                  <Payment />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/success"
+              element={
+                <MainLayout>
+                  <Success />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/failure"
+              element={
+                <MainLayout>
+                  <Failure />
+                </MainLayout>
+              }
+            />
 
-          {/* Categories */}
-          <Route
-            path="/explore-items"
-            element={
-              <MainLayout>
-                <Categories />
-              </MainLayout>
-            }
-          />
+            {/* Categories */}
+            <Route
+              path="/explore-items"
+              element={
+                <MainLayout>
+                  <Categories />
+                </MainLayout>
+              }
+            />
 
-          {/* ProductDetails */}
-          <Route path="/product/:id" element={<ProductDetails />} />
-        </Routes>
-      </HashRouter>
-    </CartProvider>
+            {/* ProductDetails */}
+            <Route path="/product/:id" element={<ProductDetails />} />
+          </Routes>
+        </HashRouter>
+      </CartProvider>
+    </AuthProvider>
   );
 }
 

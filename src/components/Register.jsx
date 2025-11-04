@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "./Home/AuthContext";
 import "./css/Register.css";
 
 export default function Register() {
   const location = useLocation();
+  const navigate = useNavigate();
   const params = new URLSearchParams(location.search);
   const formType = params.get("form");
 
+  const { login } = useAuth(); // AuthContext login
   const [showSignUp, setShowSignUp] = useState(formType !== "login");
   const [loginPwVisible, setLoginPwVisible] = useState(false);
 
@@ -15,12 +18,41 @@ export default function Register() {
     else setShowSignUp(true);
   }, [formType]);
 
+  // Handle login
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = document.getElementById("login-email").value;
+    const password = document.getElementById("login-pw").value;
+
+    if (email && password) {
+      login({ email }); // Save user in context
+      navigate(-1); // Go back to previous page
+    } else {
+      alert("Please enter email and password");
+    }
+  };
+
+  // Handle signup
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("signUp_email").value;
+    const password = document.getElementById("signup-pw").value;
+
+    if (username && email && password) {
+      login({ username, email }); // Auto-login after signup
+      navigate(-1); // Back to previous page
+    } else {
+      alert("Please fill all fields");
+    }
+  };
+
   return (
     <div className="authwrapper">
       <div className={`container${showSignUp ? " active" : ""}`}>
         {!showSignUp ? (
           <div className="signIn">
-            <form>
+            <form onSubmit={handleLogin}>
               <h2>Login</h2>
               <div className="input_grp">
                 <input type="email" id="login-email" required />
@@ -55,7 +87,7 @@ export default function Register() {
                 <label htmlFor="login_rem">Remember me</label>
               </div>
 
-              <button className="btn" type="submit" id="signIn">
+              <button className="btn" type="submit">
                 Login
               </button>
 
@@ -65,7 +97,6 @@ export default function Register() {
                   <button
                     type="button"
                     onClick={() => setShowSignUp(true)}
-                    id="sign_in"
                     style={{
                       background: "none",
                       border: "none",
@@ -81,7 +112,7 @@ export default function Register() {
           </div>
         ) : (
           <div className="signUp">
-            <form>
+            <form onSubmit={handleSignUp}>
               <h2>Sign Up</h2>
               <div className="input_grp">
                 <input type="text" id="username" required />
@@ -123,7 +154,7 @@ export default function Register() {
                 </label>
               </div>
 
-              <button className="btn" id="signUp" type="submit">
+              <button className="btn" type="submit">
                 Sign Up
               </button>
 
@@ -133,7 +164,6 @@ export default function Register() {
                   <button
                     type="button"
                     onClick={() => setShowSignUp(false)}
-                    id="sign_up"
                     style={{
                       background: "none",
                       border: "none",
